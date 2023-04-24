@@ -1,0 +1,43 @@
+
+{% extends 'front/ho.html.twig' %}
+
+             
+{% block body %}
+  <div class="container">
+    <div class="row" id="bac-table">
+      {% for subject in subjects %}
+        <div class="col-xl-3 col-md-4 col-sm-6">
+          <div class="services-box p-4 bg-white mt-4">
+            <div class="services-img float-start me-4">
+              <img src="../assets/images/matiere.jpg" alt="">
+            </div>
+            <h5>{{ subject.name }}</h5>
+            <div class="overflow-hidden">
+              <p class="text-muted">{{ subject.description }}</p>
+              <a href="{{ path('courses_list', {'subjectId': subject.id}) }}" class="btn btn-custom me-4">Consulter Cours</a>
+            </div>
+          </div>
+        </div>
+        {% if loop.index % 4 == 0 %}
+          </div><div class="row" id="bac-table">
+        {% endif %}
+      {% endfor %}
+    </div>
+    {{ knp_pagination_render(subjects, 'front/pagination.html.twig') }}
+  </div>
+{% endblock %}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+
+{% extends 'front/ho.html.twig' %}
+
+{% block body %}
+
+ <div class="row">
+  <h1 class="text-center" >{{ subject.name }} Courses</h1>
+ 
+    <div >
+      {% for course in courses %}
+      <div class="col-xl-6 col-sm-6">
+        <div class="services-box p-4 bg-white mt-4">
+                    
+          <h3 class="card-title">{{ course.name }}</h3>
+          <p class="card-text">{{ course.description }}</p>
+          <p class="card-text">{{ course.difficulty }}</p>
+          <a href="" class="btn btn-primary">consulter PDF</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{{ knp_pagination_render(courses, 'front/pagination.html.twig') }}
+{% endblock %}
