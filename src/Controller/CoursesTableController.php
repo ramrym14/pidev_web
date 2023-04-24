@@ -79,10 +79,10 @@ public function courses(Request $request): Response
         );
     }
 
-    // Return the course data as JSON if it's an Ajax request
-    if ($request->isXmlHttpRequest()) {
-        return new JsonResponse($courseData);
-    }
+    // // Return the course data as JSON if it's an Ajax request
+    // if ($request->isXmlHttpRequest()) {
+    //     return new JsonResponse($courseData);
+    // }
 
     // Render the course table with the form
     return $this->render('admin/coursesTable.html.twig', [

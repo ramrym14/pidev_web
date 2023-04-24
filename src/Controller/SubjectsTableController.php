@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Form\SubjectType;
 use App\Form\SearchFormType;
 use App\Repository\SubjectsRepository ;
+use App\Repository\CoursesRepository ;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Doctrine\ORM\QueryBuilder;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -126,6 +127,23 @@ class SubjectsTableController extends AbstractController
 
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
